@@ -30,4 +30,14 @@ puts(bname);
 cout<<"\nAuthor's name :-	";
 puts(aname);
 }
+void modify_book()
+{
+cout<<"\nBook no. :"<<bno;
+cout<<"\nModify book name : ";
+gets(bname);
+cout<<"\nModify Author's name of the book : ";
+gets(aname);
+}
+char*retbno()
+{ return bno; }
 
