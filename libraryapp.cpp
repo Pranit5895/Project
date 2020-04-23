@@ -40,4 +40,7 @@ gets(aname);
 }
 char*retbno()
 { return bno; }
+void report()
+{ cout<<bno<<setw(30)<<bname<<setw(30)<<aname<<endl; }
+} ;
 
