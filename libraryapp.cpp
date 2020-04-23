@@ -43,4 +43,10 @@ char*retbno()
 void report()
 { cout<<bno<<setw(30)<<bname<<setw(30)<<aname<<endl; }
 } ;
+class student
+{
+char admno[6];
+char name[20];
+char stbno[6];
+int token;
 
