@@ -49,4 +49,26 @@ char admno[6];
 char name[20];
 char stbno[6];
 int token;
+public:
+void create_student()
+{
+clrscr();
+cout<<"\nNEW STUDENT ENTRY.. \n";
+cout<<"\nEnter the admission no. :- ";
+cin>>admno;
+cout<<"\n\nEnter the name of the student ";
+gets(name);
+token=0;
+stbno[0]='\0';
+cout<<"\nStudent record Created.. ";
+}
+void show_student()
+{
+cout<<"\nAdmission no. :- "<<admno;
+cout<<"\nStudent name; ";
+puts(name);
+cout<<"\nNo. of books issued: "<<token;
+if(token==1)
+cout<<"\nBook No. "<<stbno;
+}
 
