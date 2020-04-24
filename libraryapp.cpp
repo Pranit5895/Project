@@ -77,4 +77,19 @@ cout<<"\nAdmission no. : "<<admno;
 cout<<"\nModify Student Name : ";
 gets(name);
 }
+char* retadmno()
+{ return admno; }
+char* retstbno()
+{ return stbno; }
+int rettoken()
+{ return token; }
+void addtoken()
+{ token=1; }
+void resettoken()
+{ token=0; }
+void getstbno(char t[] )
+{ strcpy(stbno,t); }
+void report()
+{      cout<<"\t"<<admno<<setw(20)<<name<<setw(10)<<token<<endl; }
+};
 
