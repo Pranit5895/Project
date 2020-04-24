@@ -71,4 +71,10 @@ cout<<"\nNo. of books issued: "<<token;
 if(token==1)
 cout<<"\nBook No. "<<stbno;
 }
+void modify_student()
+{
+cout<<"\nAdmission no. : "<<admno;
+cout<<"\nModify Student Name : ";
+gets(name);
+}
 
