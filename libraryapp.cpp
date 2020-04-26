@@ -140,4 +140,56 @@ if(flag==0)
 cout<<"\n\nBook does not exist ";
 getch();
 }
+void modify_book()  //Function to modify record of book
+{
+char n[6];
+int found =0;
+clrscr();
+cout<<"\n\n\tMODIFY BOOK RECORD..";
+cout<<"\n\n\tEnter The Book no. of the book:- ";
+cin>>n;
+fp.open("book.dat",ios::in||ios::out);
+while(fp.read((char*)&bk,sizeof(book))&&found==0)
+{
+if(strcmpi(bk.retbno(),n)==0)
+{ bk.show_book();
+cout<<"\nenter the New Details of book"<<endl;
+bk.modify_book();
+int pos=-1*sizeof(bk);
+fp.seekp(pos,ios::cur);
+fp.write((char*)&bk,sizeof(book));
+cout<<"\n\n\t Record Updated";
+found=1; }
+}
+fp.close();
+if(found==0)
+cout<<"\n\nRecord not found ";
+getch();
+}
+void modify_student()  //Function to modify record of student
+{
+char n[6];
+int found=0;
+clrscr();
+cout<<"\n\n\tMODIFY STUDENT RECORED... ";
+cout<<"\n\n\tEnter The admission no. of the student :";
+cin>>n;
+fp.open("student.dat",ios::in||ios::out);
+while(fp.read((char*)&st,sizeof(student))&&found==0)
+{
+if(strcmpi(st.retadmno(),n)==0)
+{ st.show_student();
+cout<<"\nenter the new Details of student "<<endl;
+st.modify_student();
+int pos=-1*sizeof(st);
+fp.seekp(pos,ios::cur);
+fp.write((char*)&st,sizeof(student));
+cout<<"\n\n\t Record updated ";
+found=1; }
+}
+fp.close();
+if(found==0)
+cout<<"\n\n Record Not Foound ";
+getch();
+}
 
