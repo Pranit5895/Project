@@ -111,4 +111,33 @@ cin>>ch;
 while (ch=='y'||ch=='Y');
 fp.close();
 }
+void write_student()
+{
+char ch;
+ofstream fp("student.dat",ios::app||ios::in) ;
+do
+{
+st.create_student();
+fp.write((char*)&st,sizeof(student));
+cout<<"\n\nDo you want to add more record..(y/n) ";
+cin>>ch;
+} while(ch=='y'||ch=='y');
+fp.close(); }
+void display_spb(char n[])     //Function to read specific record
+{
+cout<<"\nBOOK DETAILS\n";
+int flag=0;
+fp.open("book.dat",ios::in);
+while(fp.read((char*)&bk,sizeof(book)))
+{
+if(stricmp(bk.retbno(),n)==0)
+{ bk.show_book();
+flag=1;
+}
+}
+fp.close();
+if(flag==0)
+cout<<"\n\nBook does not exist ";
+getch();
+}
 
