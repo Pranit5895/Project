@@ -92,4 +92,23 @@ void getstbno(char t[] )
 void report()
 {      cout<<"\t"<<admno<<setw(20)<<name<<setw(10)<<token<<endl; }
 };
+fstream fp, fp1;
+book bk;
+student st;
+void write_book()     //Function to write in file
+{
+char ch;
+ofstream fp("book.dat",ios::app||ios::in);
+
+do
+{
+clrscr();
+bk.create_book();
+fp.write((char*)&bk,sizeof(book));
+cout<<"\n\nDo you want to add more record..(y/n)";
+cin>>ch;
+}
+while (ch=='y'||ch=='Y');
+fp.close();
+}
 
