@@ -192,4 +192,32 @@ if(found==0)
 cout<<"\n\n Record Not Foound ";
 getch();
 }
+void delete_student() //Function to delete student record
+{
+char n[6];
+int flag=0;
+clrscr();
+cout<<"\n\n\n\n\t DELETE STUDENT... ";
+cout<<"\n\nEnter The Admission no. of the student you want to delete :";
+cin>>n;
+fp.open("student.dat",ios::in||ios::out);
+fstream fp2;
+fp2.open("temp.dat",ios::out) ;
+fp.seekg(0,ios::beg) ;
+while(fp.read((char*)&st,sizeof(student)))
+{ if(stricmp(st.retadmno(),n)!=0)
+fp2.write((char*)&st,sizeof(student));
+else
+flag=1;
+}
+fp2.close();
+fp.close();
+remove("student.dat");
+rename("temp.dat","student.dat");
+if (flag==1)
+cout<<"\n\n Record deleted.. ";
+else
+cout<<"\n\n Record not found ";
+getch();
+}
 
