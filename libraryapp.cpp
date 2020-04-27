@@ -220,4 +220,28 @@ else
 cout<<"\n\n Record not found ";
 getch();
 }
+void delete_book()  //Function to delete book record
+{
+char n[6];
+clrscr();
+cout<<"\n\n\n\t DELETE BOOK... ";
+cout<<"\n\nEnter the Book no. of the book you want to delete ; ";
+cin>>n;
+fp.open("book.dat",ios::in||ios::out) ;
+fstream fp2;
+fp2.open("temp.dat",ios::out) ;
+fp.seekg(0,ios::beg) ;
+while(fp.read((char*)&bk,sizeof(book)))
+{
+if (strcmpi(bk.retbno(),n)!=0)
+{ fp2.write((char*)&bk,sizeof(book)); }
+}
+fp2.close();
+fp.close();
+remove("book.dat");
+rename("temp.dat","book.dat");
+cout<<"\n\n\t Record Deleted.. ";
+getch();
+}
+
 
