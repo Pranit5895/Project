@@ -244,4 +244,38 @@ cout<<"\n\n\t Record Deleted.. ";
 getch();
 }
 
+void display_alls()//Function to display student list
+{
+clrscr();
+fp.open("student.dat",ios::in) ;
+if(!fp)
+{ cout<<"ERROR!! FILE COULD NOT BE OPEN ";
+getch();
+return; }
+cout<<"\n\n\t\tSTUDENT LIST\n\n";
+cout<<"==================================================================\n";
+cout<<"\tAdmission No. "<<setw(10)<<"Name"<<setw(20)<<"Book Issued\n";
+cout<<"==================================================================\n";
+while(fp.read((char*)&st,sizeof(student)))
+{ st.report(); }
+fp.close();
+getch();
+}
+void display_allb()   //Function to display book list
+{ clrscr();
+fp.open("book.dat",ios::in);
+if(!fp)
+{
+cout<<"ERROR!! FILE COULD NOT BE OPEN ";
+getch();
+return; }
+cout<<"\n\n\t\tBOOK LIST\n\n";
+cout<<"===================================================================\n";
+cout<<"Book Number "<<setw(20)<<"Book Name"<<setw(25)<<"Authors\n";
+cout<<"===================================================================\n";
+while(fp.read((char*)&bk,sizeof(book)))
+{ bk.report() ;  }
+fp.close();
+getch();
+}
 
