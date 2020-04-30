@@ -379,4 +379,16 @@ getch();
 return; }
 else
 return; }
+void backdat()  //Function to backup data
+{ clrscr();
+cout<<"The backupupes file will be store in"<<"\n";
+cout<<"Press any key to continue"<<"\n";
+getch();
+system("save") ;
+//SAVE IS A BATCH FILE WHOSE CODING IS GIVEN AT THE END OF PROGRAM
+clrscr();
+cout<<"YOUR DATA HAS BEEN SAVED TO DOCUMENTS SUCCESSFULLY!! "<<"\n";
+cout<<"Press any key to go back"<<"\n";
+getch();
+return; }
 
