@@ -356,4 +356,27 @@ getch();
 fp.close();
 fp1.close();
 }
+void deleteall() //Function to delete data
+{ clrscr();
+int a;
+cout<<"Press 1 to delete all the data "<<"\n";
+cout<<"Press 2 to go back "<<"\n";
+cin>>a;
+if(a==1)
+{ clrscr();
+cout<<"PLEASE BE SURE THAT YOU HAVE TAKEN THE BACKUP OF UR DATA ";
+cout<<"BECAUSE THE FILES IF DELETED WILL NOT BE ABLE TO RESTORED"<<"\n";
+cout<<"Press any key to continue"<<"\n";
+getch();
+ofstream delstu("student.dat",ios::trunc);
+delstu.close();
+ofstream delboo("book.dat",ios::trunc);
+delboo.close();
+clrscr();
+cout<<"All the data deleted"<<"\n";
+cout<<"Press any kry to go back"<<"\n";
+getch();
+return; }
+else
+return; }
 
