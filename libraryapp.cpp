@@ -391,4 +391,64 @@ cout<<"YOUR DATA HAS BEEN SAVED TO DOCUMENTS SUCCESSFULLY!! "<<"\n";
 cout<<"Press any key to go back"<<"\n";
 getch();
 return; }
+void admin_menu()   //Administration menu
+{ clrscr();
+int ch2;
+cout<<"\n\n\n\t\t ADMINISTRATION MENU";
+cout<<"\n\t1.CREATE STUDENT RECORD";
+cout<<"\n\t2.DISPLAY ALL STUDENT RECORD";
+cout<<"\n\t3.DISPLAY SPECIFIC STUDENT RECORD";
+cout<<"\n\t4.MODIFY STUDENT RECORD";
+cout<<"\n\t5.DELETE STUDENT RECORD";
+cout<<"\n\t6.CREATE BOOK ";
+cout<<"\n\t7.DISPLAY ALL BOOKS ";
+cout<<"\n\t8.DISPLAY SPECIFIC BOOK ";
+cout<<"\n\t9.MODIFY BOOK ";
+cout<<"\n\t10.DELETE BOOK ";
+cout<<"\n\t11.DELETE ALL THE DATA ";
+cout<<"\n\t12.BACKUP YOUR DATA ";
+cout<<"\n\t13.BACK TO MAIN MENU ";
+cout<<"\n"<<"Please choose an option from (1-12);- ";
+cin>>ch2;
+switch(ch2)
+{
+case 1: clrscr();
+write_student();
+break;
+case 2: display_alls() ;
+break;
+case 3: char num[6];
+clrscr();
+cout<<"\n\n\tPlease Enter the Admission No. ";
+cin>>num;
+display_sps(num);
+break;
+case 4: modify_student() ;
+break ;
+case 5: delete_student();
+break;
+case 6: clrscr();
+write_book() ;
+break;
+case 7: display_allb();
+break;
+case 8: { char num[6];
+clrscr();
+cout<<"\n\n\tPlease enter the Book no. ;- ";
+cin>>num;
+display_spb(num);
+break; }
+case 9: modify_book();
+break;
+case 10: delete_book();
+break;
+case 11: deleteall();
+break;
+case 12: backdat();
+break;
+case 13: return;
+default : cout<<"\a";
+}
+admin_menu();
+}
 
