@@ -1,3 +1,5 @@
+//Code for LIBRARY MANAGEMENT SYSYTEM (LMS) IN C++
+
 #include<fstream.h>
 #include<iostream.h>
 #include<conio.h>
@@ -486,3 +488,5 @@ default : cout<<"\a";
 } while(ch!='4');
 }
 
+
+//Code Finished and error free code written using file handling and classes 
