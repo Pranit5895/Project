@@ -451,4 +451,38 @@ default : cout<<"\a";
 }
 admin_menu();
 }
+void intro() //Introductory function
+{ clrscr();
+cout<<"\t\t\t\t\t\t\t\t\t\t\t\t GENESIS GLOBAL SCHOOL,NOIDA,INDIA"<<"\n\n";
+cout<<"\t\t\t\t\t\t\t\t\t\t\t\t       LIBRARY MANAGMENT "<<"\n\n";
+cout<<"                          WELCOME"<<"\n\n\n\n\n";
+cout<<"                      	 MADE BY;- PRANIT GUPTA ";
+cout<<"\n\n"<<"Press any key to continue... ";
+getch(); }
+void main()
+{ char ch;
+intro();
+do{ clrscr();
+cout<<"\n\n\n\tMAIN MENU";
+cout<<"\n\n\t01. BOOK ISSUE";
+cout<<"\n\n\t02. BOOK DEPOSIT";
+cout<<"\n\n\t03. ADMINISTRATION MENU";
+cout<<"\n\n\t04. EXIT ";
+cout<<"\n\n\tPlease Select your option(1-4) ";
+cin>>ch;
+switch(ch)
+{
+case '1':clrscr();
+book_issue();
+break;
+case '2':book_deposit();
+break;
+case '3':admin_menu();
+break;
+case '4': exit(0);
+break;
+default : cout<<"\a";
+}
+} while(ch!='4');
+}
 
