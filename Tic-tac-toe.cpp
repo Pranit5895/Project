@@ -19,3 +19,13 @@ int main()
         cin >> choice;
 
         mark=(player == 1) ? 'X' : 'O';
+	 if (choice == 1 && square[1] == '1')
+
+            square[1] = mark;
+        else if (choice == 2 && square[2] == '2')
+
+            square[2] = mark;
+        else if (choice == 3 && square[3] == '3')
+
+            square[3] = mark;
+        else if (choice == 4 && square[4] == '4')
