@@ -10,3 +10,12 @@ int main()
 	int player = 1,i,choice;
 
     char mark;
+    do
+    {
+        board();
+        player=(player%2)?1:2;
+
+        cout << "Player " << player << ", enter a number:  ";
+        cin >> choice;
+
+        mark=(player == 1) ? 'X' : 'O';
