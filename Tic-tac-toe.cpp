@@ -60,3 +60,11 @@ int main()
     if(i==1)
 
         cout<<"==>\aPlayer "<<--player<<" win ";
+     else
+        cout<<"==>\aGame draw";
+
+    cin.ignore();
+    cin.get();
+    return 0;
+}
+
