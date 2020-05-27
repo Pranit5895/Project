@@ -40,3 +40,7 @@ int main()
 
             square[7] = mark;
         else if (choice == 8 && square[8] == '8')
+		square[8] = mark;
+        else if (choice == 9 && square[9] == '9')
+
+            square[9] = mark;
