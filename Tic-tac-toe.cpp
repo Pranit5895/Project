@@ -57,3 +57,6 @@ int main()
         player++;
     }while(i==-1);
     board();
+    if(i==1)
+
+        cout<<"==>\aPlayer "<<--player<<" win ";
