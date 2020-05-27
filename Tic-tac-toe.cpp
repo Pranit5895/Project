@@ -52,3 +52,8 @@ int main()
             cin.ignore();
             cin.get();
         }
+	i=checkwin();
+
+        player++;
+    }while(i==-1);
+    board();
