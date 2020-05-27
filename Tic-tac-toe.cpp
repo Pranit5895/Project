@@ -105,3 +105,6 @@ int checkwin()
                   && square[7] != '7' && square[8] != '8' && square[9] != '9')
 
         return 0;
+    else
+        return -1;
+}
