@@ -36,3 +36,17 @@
             cout << "\nThe Price of The Product : " << price;
             cout << "\nDiscount : " << dis;
         }
+	    int retpno()
+        {
+            return pno;
+        }
+
+        float retprice()
+        {
+            return price;
+        }
+
+        char * retname()
+        {
+            return name;
+        }
