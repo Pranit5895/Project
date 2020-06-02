@@ -28,3 +28,11 @@
                 cout << "\nPlease Enter The Discount (%) ";
                 cin >> dis;
             }
+	    void show_product()
+        {
+            cout << "\nThe Product No. of The Product : " << pno;
+            cout << "\nThe Name of The Product : ";
+            puts(name);
+            cout << "\nThe Price of The Product : " << price;
+            cout << "\nDiscount : " << dis;
+        }
