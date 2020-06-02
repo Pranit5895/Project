@@ -270,3 +270,20 @@ void intro()
     getch();
 
 }
+//***************************************************************
+// ADMINSTRATOR MENU FUNCTION
+//****************************************************************
+void admin_menu()
+{
+    clrscr();
+    char ch2;
+    cout << "\n\n\n\tADMIN MENU";
+    cout << "\n\n\t1.CREATE PRODUCT";
+    cout << "\n\n\t2.DISPLAY ALL PRODUCTS";
+    cout << "\n\n\t3.QUERY ";
+    cout << "\n\n\t4.MODIFY PRODUCT";
+    cout << "\n\n\t5.DELETE PRODUCT";
+    cout << "\n\n\t6.VIEW PRODUCT MENU";
+    cout << "\n\n\t7.BACK TO MAIN MENU";
+    cout << "\n\n\tPlease Enter Your Choice (1-7) ";
+    ch2 = getche();
