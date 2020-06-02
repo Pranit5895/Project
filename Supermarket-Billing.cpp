@@ -314,3 +314,8 @@ void admin_menu()
         getch();
     case '7':
         break;
+	 default:
+        cout << "\a";
+        admin_menu();
+    }
+}
