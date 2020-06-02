@@ -76,3 +76,20 @@ void write_product()
     cout << "\n\nThe Product Has Been Created ";
     getch();
 }
+//***************************************************************
+// function to read all records from file
+//****************************************************************
+void display_all()
+{
+    clrscr();
+    cout << "\n\n\n\t\tDISPLAY ALL RECORD !!!\n\n";
+    fp.open("Shop.dat", ios:: in );
+    while (fp.read((char * ) & pr, sizeof(product)))
+    {
+        pr.show_product();
+        cout << "\n\n====================================\n";
+        getch();
+    }
+    fp.close();
+    getch();
+}
