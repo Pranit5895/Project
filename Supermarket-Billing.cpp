@@ -270,9 +270,9 @@ void intro()
     getch();
 
 }
-//***************************************************************
+***************************************************************
 // ADMINSTRATOR MENU FUNCTION
-//****************************************************************
+****************************************************************
 void admin_menu()
 {
     clrscr();
@@ -326,3 +326,28 @@ void main()
 {
     char ch;
     intro();
+     do
+    {
+        clrscr();
+        cout << "\n\n\n\tMAIN MENU";
+        cout << "\n\n\t01. CUSTOMER";
+        cout << "\n\n\t02. ADMINISTRATOR";
+        cout << "\n\n\t03. EXIT";
+        cout << "\n\n\tPlease Select Your Option (1-3) ";
+        ch = getche();
+        switch (ch)
+        {
+        case '1':
+            clrscr();
+            place_order();
+            getch();
+            break;
+        case '2':
+            admin_menu();
+            break;
+        case '3':
+            exit(0);
+        default:
+            cout << "\a";
+        }
+    } while (ch != '3');
