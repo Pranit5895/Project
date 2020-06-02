@@ -227,3 +227,28 @@ void place_order()
     cout << "\n\nThank You For Placing The Order";
     getch();
     clrscr();
+    cout << "\n\n******************************** INVOICE ************************\n";
+    cout << "\nPr No.\tPr Name\tQuantity \tPrice \tAmount \tAmount after
+    discount\ n ";
+    for (int x = 0; x <= c; x++)
+    {
+        fp.open("Shop.dat", ios:: in );
+        fp.read((char * ) & pr, sizeof(product));
+        while (!fp.eof())
+        {
+            if (pr.retpno() == order_arr[x])
+            {
+                amt = pr.retprice() * quan[x];
+                damt = amt - (amt * pr.retdis() / 100);
+                cout << "\n" << order_arr[x] << "\t" << pr.retname() <<
+                    "\t" << quan[x] << "\t\t" << pr.retprice() << "\t" << amt << "\t\t" << damt;
+                total += damt;
+            }
+            fp.read((char * ) & pr, sizeof(product));
+        }
+
+        fp.close();
+    }
+    cout << "\n\n\t\t\t\t\tTOTAL = " << total;
+    getch();
+}
