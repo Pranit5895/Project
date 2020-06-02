@@ -287,3 +287,30 @@ void admin_menu()
     cout << "\n\n\t7.BACK TO MAIN MENU";
     cout << "\n\n\tPlease Enter Your Choice (1-7) ";
     ch2 = getche();
+     switch (ch2)
+    {
+    case '1':
+        clrscr();
+        write_product();
+        break;
+    case '2':
+        display_all();
+        break;
+    case '3':
+        int num;
+        clrscr();
+        cout << "\n\n\tPlease Enter The Product No. ";
+        cin >> num;
+        display_sp(num);
+        break;
+    case '4':
+        modify_product();
+        break;
+    case '5':
+        delete_product();
+        break;
+    case '6':
+        menu();
+        getch();
+    case '7':
+        break;
