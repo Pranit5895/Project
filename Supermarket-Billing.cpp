@@ -173,3 +173,32 @@ void delete_product()
     cout << "\n\n\tRecord Deleted ..";
     getch();
 }
+/***************************************************************
+// function to display all products price list
+//****************************************************************
+
+void menu()
+{
+    clrscr();
+    fp.open("Shop.dat", ios:: in );
+    if (!fp)
+    {
+        cout << "ERROR!!! FILE COULD NOT BE OPEN\n\n\n Go To Admin Menu to create
+        File ";
+        cout << "\n\n\n Program is closing ....";
+        getch();
+        exit(0);
+    }
+
+    cout << "\n\n\t\tProduct MENU\n\n";
+    cout << "====================================================\n";
+    cout << "P.NO.\t\tNAME\t\tPRICE\n";
+    cout << "====================================================\n";
+
+    while (fp.read((char * ) & pr, sizeof(product)))
+    {
+        cout << pr.retpno() << "\t\t" << pr.retname() << "\t\t" << pr.retprice() << endl;
+    }
+    fp.close();
+}
+
