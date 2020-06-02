@@ -252,3 +252,21 @@ void place_order()
     cout << "\n\n\t\t\t\t\tTOTAL = " << total;
     getch();
 }
+//***************************************************************
+// INTRODUCTION FUNCTION
+//****************************************************************
+
+void intro()
+{
+    clrscr();
+    gotoxy(31, 11);
+    cout << "SUPER MARKET";
+    gotoxy(35, 14);
+    cout << "BILLING";
+    gotoxy(35, 17);
+    cout << "PROJECT";
+    cout << "\n\nMADE BY : ANUJ KUMAR";
+    cout << "\n\nSCHOOL : RYAN INTERNATIONAL SCHOOL";
+    getch();
+
+}
