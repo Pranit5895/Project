@@ -145,3 +145,31 @@ void modify_product()
         cout << "\n\n Record Not Found ";
     getch();
 }
+//***************************************************************
+// function to delete record of file
+//****************************************************************
+void delete_product()
+{
+    int no;
+    clrscr();
+    cout << "\n\n\n\tDelete Record";
+    cout << "\n\nPlease Enter The product no. of The Product You Want To Delete";
+    cin >> no;
+    fp.open("Shop.dat", ios:: in | ios::out);
+    fstream fp2;
+    fp2.open("Temp.dat", ios::out);
+    fp.seekg(0, ios::beg);
+    while (fp.read((char * ) & pr, sizeof(product)))
+    {
+        if (pr.retpno() != no)
+        {
+            fp2.write((char * ) & pr, sizeof(product));
+        }
+    }
+    fp2.close();
+    fp.close();
+    remove("Shop.dat");
+    rename("Temp.dat", "Shop.dat");
+    cout << "\n\n\tRecord Deleted ..";
+    getch();
+}
