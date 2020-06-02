@@ -201,4 +201,29 @@ void menu()
     }
     fp.close();
 }
+//***************************************************************
+// function to place order and generating bill for Products
+//****************************************************************
 
+void place_order() 
+{
+    int order_arr[50], quan[50], c = 0;
+    float amt, damt, total = 0;
+    char ch = 'Y';
+    menu();
+    cout << "\n============================";
+    cout << "\n PLACE YOUR ORDER";
+    cout << "\n============================\n";
+    do 
+    {
+        cout << "\n\nEnter The Product No. Of The Product : ";
+        cin >> order_arr[c];
+        cout << "\nQuantity in number : ";
+        cin >> quan[c];
+        c++;
+        cout << "\nDo You Want To Order Another Product ? (y/n)";
+        cin >> ch;
+    } while (ch == 'y' || ch == 'Y');
+    cout << "\n\nThank You For Placing The Order";
+    getch();
+    clrscr();
