@@ -50,3 +50,9 @@
         {
             return name;
         }
+	int retdis()
+        {
+            return dis;
+        }
+
+    }; //class ends here
