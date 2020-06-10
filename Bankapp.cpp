@@ -33,3 +33,11 @@ void account::create_account()
 	cin>>deposit;
 	cout<<"\n\n\nAccount Created..";
 }
+void account::show_account() const
+{
+	cout<<"\nAccount No. : "<<acno;
+	cout<<"\nAccount Holder Name : ";
+	cout<<name;
+	cout<<"\nType of Account : "<<type;
+	cout<<"\nBalance amount : "<<deposit;
+}
