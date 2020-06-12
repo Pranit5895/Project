@@ -53,4 +53,7 @@ void account::modify()
 	cout<<"\nModify Balance amount : ";
 	cin>>deposit;
 }
-
+void account::dep(int x)
+{
+	deposit+=x;
+}
