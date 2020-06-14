@@ -471,3 +471,20 @@ void help()
     printf("\n >> No negative marking for wrong answers");
 
 	printf("\n\n\t*********************BEST OF LUCK*********************************");
+	void edit_score(float score, char playernm[20])
+{
+    system("cls");
+	float sc;
+	char nm[20];
+	FILE *f;
+	f=fopen("score.txt","r");
+	fscanf(f,"%s%f",&nm,&sc);
+	if (score>=sc)
+	  {
+        sc=score;
+	    fclose(f);
+	    f=fopen("score.txt","w");
+	    fprintf(f,"%s\n%.2f",playernm,sc); //print in player name
+	    fclose(f);
+      }
+}
