@@ -412,3 +412,17 @@ int main()
 	    printf("\n\t\t TRY AGAIN");
         goto go;
      }
+	 go:
+	puts("\n\n Press Y if you want to play next game");
+	puts(" Press any key if you want to go main menu");
+	if (toupper(getchar())=='Y')
+	{
+		goto home;
+    }
+        else
+	    {
+	     	edit_score(score,playername);
+		    goto mainhome;
+        }
+      }
+     }
