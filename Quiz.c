@@ -101,3 +101,290 @@ int main()
      home:
      system("cls");
      count=0;
+     for(i=1;i<=3;i++)
+     {
+        r1=i;
+        switch(r1)
+        {
+                  case 1:
+		          printf("\n\nA collecion of 8 bits are called?");
+		          printf("\n\nA.bit\t\tB.word\n\nC.byte\t\tD.record");
+		          if (toupper(getch())=='C')
+		          {
+	           		      printf("\n\nCorrect!!!");
+                          count++;
+			              getch();
+			              system("cls");
+			              break;
+                   }
+
+
+        else
+	    {
+	            printf("\n\nWrong!!! The correct answer is C.byte");
+		        getch();
+		        system("cls");
+		        break;
+  	   	}
+                  case 2:
+		          printf("\n\nWhich of the following is a Palindrome number?");
+		          printf("\n\nA.42042\t\tB.101010\n\nC.23232\t\tD.01234");
+		          if (toupper(getch())=='C')
+		          {
+			        printf("\n\nCorrect!!!");
+                    count++;
+			        getch();
+			        system("cls");
+			        break;
+                 }
+
+
+        else
+	    {
+	            printf("\n\nWrong!!! The correct answer is C.23232");
+		        getch();
+		        system("cls");
+		        break;
+  	   	}
+
+        system("cls");
+
+        case 3:
+		printf("\n\n\nWhich of the following is most oriented toward scientific programming ?");
+		printf("\n\nA.Cobol\t\tB.Fortran\n\nC.c++\t\tD.Basic");
+
+
+        if (toupper(getch())=='B')
+		{
+            printf("\n\nCorrect!!!");
+            count++;
+			getch();
+			system("cls");
+            break;
+        }
+
+
+        else
+        {
+               printf("\n\nWrong!!! The correct answer is B.Fortran");
+		       getch();
+		       system("cls");
+               break;
+        }
+      }
+  }
+
+
+    if(count>=2)
+	{
+                goto test;
+    }
+
+    else
+	{
+            	system("cls");
+            	printf("\n\nSORRY YOU ARE NOT ELIGIBLE TO PLAY THIS GAME, BETTER LUCK NEXT TIME");
+            	getch();
+            	goto mainhome;
+	}
+
+     test:
+     system("cls");
+     printf("\n\n\t*** CONGRATULATION %s you are eligible to play the Game ***",playername);
+     printf("\n\n\n\n\t!Press any key to Start the Game!");
+     if(toupper(getch())=='p')
+     {
+                              goto game;
+     }
+
+
+     game:
+     countr=0;
+     for(i=1;i<=10;i++)
+     {
+                       system("cls");
+                       r=i;
+
+     switch(r)
+     {
+		case 1:
+		printf("\n\nAll are the example of input devices Except a:");
+		printf("\n\nA.Scanner\t\tB.Mouse\n\nC.Printer\t\tD.Keyboard");
+		if (toupper(getch())=='C')
+		{
+                                  printf("\n\nCorrect!!!");countr++;getch();
+			                      break;
+                                  getch();
+         }
+
+
+        else
+        {
+                                  printf("\n\nWrong!!! The correct answer is C.Printer");
+                                  getch();
+		                          goto score;
+		                          break;
+        }
+
+
+    	case 2:
+		printf("\n\n\nWhat kind of file extension .mpg?,");
+		printf("\n\nA.Movie file \t\tB.Text file\n\nC.Image file\t\tD.Audio file");
+		if (toupper(getch())=='A')
+		{
+                    printf("\n\nCorrect!!!");
+                    countr++;
+                    getch();
+			        break;
+         }
+
+
+    	else
+        {
+                    printf("\n\nWrong!!! The correct answer is A.Movie file");
+                    getch();
+	                goto score;
+		            break;
+	     }
+
+        case 3:
+		printf("\n\n\nA DVD is an example of a/an.. ");
+		printf("\n\nA.Magnetic disk\t\tB.Hard disk\n\nC.Output device\t\tD.Optical disk");
+		if (toupper(getch())=='D')
+		{
+                     printf("\n\nCorrect!!!");
+                     countr++;
+                     getch();
+			         break;
+                     }
+		else
+	    {
+                    printf("\n\nWrong!!! The correct answer is D.Optical disk");
+                    getch();
+		            goto score;
+		            break;
+                    }
+
+        case 4:
+		printf("\n\n\nWho is he founder of facebook?");
+		printf("\n\nA.Mark zuckerburg\tB.Tesla\n\nC.Steve jobs\t\tD.Bill gates");
+		if (toupper(getch())=='A')
+		{
+                                  printf("\n\nCorrect!!!");
+                                  countr++;
+                                  getch();
+			                      break;
+                                  }
+
+        else
+        {
+                printf("\n\nWrong!!! The correct answer is A.Mark zuckerburg");
+                getch();
+       	        goto score;
+		        break;
+		       }
+
+
+        case 5:
+		printf("\n\n\nWhich of he following is a web browser?");
+		printf("\n\nA.Dreamweaver\tB.Netscape navigator\n\nC.Maya\t\tD.Flash");
+		if(toupper(getch())=='B')
+		{
+                                 printf("\n\nCorrect!!!");
+                                 countr++;
+                                 getch();
+                                 break;}
+		else
+        {
+		       printf("\n\nWrong!!! The correct answer is B.Netscape navigator");
+		       getch();
+		       goto score;
+		       break;
+		       }
+
+        case 6:
+		printf("\n\n\nWhat kind of file extension .bak?,");
+		printf("\n\nA.Backup file \t\tB.Text file\n\nC.Image file\t\tD.Audio file");
+		if (toupper(getch())=='A')
+		{
+                                 printf("\n\nCorrect!!!");
+                                 countr++;
+                                 getch();
+                                 break;}
+		else
+        {
+		       printf("\n\nWrong!!! The correct answer is A.Backup file");
+		       getch();
+		       goto score;
+		       break;
+		       }
+
+		case 7:
+		printf("\n\n\nwhich of he following is a read only memory storage device ");
+		printf("\n\nA.Flash drive\t\tB.Hard disk\n\nC.Floppy disk\t\tD.CDROM");
+		if(toupper(getch())=='D')
+		{
+                                 printf("\n\nCorrect!!!");
+                                 countr++;
+                                 getch();
+                                 break;}
+		else
+        {
+		       printf("\n\nWrong!!! The correct answer is D.CDROM");
+		       getch();
+		       goto score;
+		       break;
+		       }
+        case 8:
+		printf("\n\n\nThe _____ shows all the web sites any pages that you have visited one of recent time ");
+		printf("\n\nA.Hisory list\t\tB.Status bar \n\nC.task bar\t\tD.record");
+		if(toupper(getch())=='A')
+		{
+                                 printf("\n\nCorrect!!!");
+                                 countr++;
+                                 getch();
+                                 break;}
+		else
+        {
+		       printf("\n\nWrong!!! The correct answer is A.Hisory list");
+		       getch();
+		       goto score;
+		       break;
+		       }
+        case 9:
+		printf("\n\n\nA 32 bit word computer can access ____ bytes at a time ");
+		printf("\n\nA.32\t\tB.16\n\nC.8\t\tD.4");
+		if(toupper(getch())=='C')
+		{
+                                 printf("\n\nCorrect!!!");
+                                 countr++;
+                                 getch();
+                                 break;}
+		else
+        {
+		       printf("\n\nWrong!!! The correct answer is C.8");
+		       getch();
+		       goto score;
+		       break;
+		       }
+        case 10:
+     	printf("\n\n\nWho is the founder of pixar animation?");
+		printf("\n\nA.Mark zuckerburg\tB.Tesla\n\nC.Steve jobs\t\tD.Bill gates");
+		if(toupper(getch())=='C')
+		{
+                                 printf("\n\nCorrect!!!");
+                                 countr++;
+                                 getch();
+                                 break;
+
+                                 }
+		else
+        {
+		       printf("\n\nWrong!!! The correct answer is C.Steve jobs");
+		       getch();
+		       goto score;
+		       break;
+		       }
+
+		}
+  }
