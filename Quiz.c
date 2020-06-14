@@ -30,3 +30,40 @@ int main()
      printf("\n\t\t > press H for help            ");
      printf("\n\t\t > press Q to quit             ");
      printf("\n\t\t________________________________________\n\n");
+     choice=toupper(getch());
+
+     if(choice=='V')
+	 {
+         system("cls");
+         show_record();
+         system("cls");
+         goto mainhome;
+	 }
+
+     else if(choice=='H')
+	 {
+         system("cls");
+         help();
+         getch();
+         system("cls");
+	     goto mainhome;
+	 }
+
+     else if(choice=='R')
+	 {
+         system("cls");
+         reset_score();
+	     getch();
+	     goto mainhome;
+      }
+
+     else if (choice=='Q')
+	 {
+         exit(1);
+     }
+
+    else if(choice=='S')
+    {
+        system("cls");
+        printf("\n\n\n\n\n\n\n\n\n\n\t\t\tResister your name:");
+        gets(playername);
