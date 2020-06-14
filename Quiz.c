@@ -388,3 +388,27 @@ int main()
 
 		}
   }
+     score:
+    system("cls");
+	score=(float)countr*100000;
+	if(score>0.00 && score<1000000)
+	{
+	   printf("\n\n\t\t**************** CONGRATULATION *****************");
+       printf("\n\t You won $%.2f",score);
+       goto go;
+    }
+
+	 else if(score==1000000.00)
+	 {
+	    printf("\n\n\n \t\t**************** CONGRATULATION ****************");
+	    printf("\n\t\t\t\t YOU ARE A MILLIONAIRE!!!!!!!!!");
+	    printf("\n\t\t\t\t You won $%.2f",score);
+	    printf("\n\t\t\t\t Thank You !!");
+	 }
+	 else
+     {
+	    printf("\n\n\t******** SORRY YOU DIDN'T WIN ANY CASH ********");
+	    printf("\n\t\t Thanks for your participation");
+	    printf("\n\t\t TRY AGAIN");
+        goto go;
+     }
