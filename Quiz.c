@@ -85,3 +85,19 @@ int main()
         printf("\n\n\t!!!!!!!!!!!!! ALL THE BEST !!!!!!!!!!!!!");
         printf("\n\n\n Press Y  to start the game!\n");
         printf("\n Press any other key to return to the main menu!");
+	if (toupper(getch())=='Y')
+		{
+            system("cls");
+		    goto home;
+        }
+
+       else
+		{
+            system("cls");
+            goto mainhome;
+        }
+
+
+     home:
+     system("cls");
+     count=0;
