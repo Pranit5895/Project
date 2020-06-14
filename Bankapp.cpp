@@ -61,3 +61,7 @@ void account::draw(int x)
 {
 	deposit-=x;
 }
+void account::report() const
+{
+	cout<<acno<<setw(10)<<" "<<name<<setw(10)<<" "<<type<<setw(6)<<deposit<<endl;
+}
