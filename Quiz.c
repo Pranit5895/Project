@@ -1,3 +1,5 @@
+//c project on quiz game
+
 #include<stdio.h>
 #include<conio.h>
 #include<ctype.h>
