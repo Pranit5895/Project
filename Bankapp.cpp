@@ -65,3 +65,7 @@ void account::report() const
 {
 	cout<<acno<<setw(10)<<" "<<name<<setw(10)<<" "<<type<<setw(6)<<deposit<<endl;
 }
+int account::retacno() const
+{
+	return acno;
+}
