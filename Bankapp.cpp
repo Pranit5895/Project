@@ -69,3 +69,7 @@ int account::retacno() const
 {
 	return acno;
 }
+int account::retdeposit() const
+{
+	return deposit;
+}
