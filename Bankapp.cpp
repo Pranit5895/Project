@@ -73,3 +73,8 @@ int account::retdeposit() const
 {
 	return deposit;
 }
+char account::rettype() const
+{
+	return type;
+}
+
