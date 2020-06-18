@@ -77,4 +77,5 @@ char account::rettype() const
 {
 	return type;
 }
+//Class account finished with function declaration
 
