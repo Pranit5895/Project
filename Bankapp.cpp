@@ -86,4 +86,9 @@ void delete_account(int);	//function to delete record of file
 void display_all();		//function to display all account details
 void deposit_withdraw(int, int); // function to desposit/withdraw amount for given account
 void intro();	//introductory screen function
+int main()          //main funtion
+{
+	char ch;
+	int num;
+	intro();
 
