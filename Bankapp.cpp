@@ -91,4 +91,16 @@ int main()          //main funtion
 	char ch;
 	int num;
 	intro();
+	do
+	{
+		system("cls");
+		cout<<"\n\n\n\tMAIN MENU";
+		cout<<"\n\n\t01. NEW ACCOUNT";
+		cout<<"\n\n\t02. DEPOSIT AMOUNT";
+		cout<<"\n\n\t03. WITHDRAW AMOUNT";
+		cout<<"\n\n\t04. BALANCE ENQUIRY";
+		cout<<"\n\n\t05. ALL ACCOUNT HOLDER LIST";
+		cout<<"\n\n\t06. CLOSE AN ACCOUNT";
+		cout<<"\n\n\t07. MODIFY AN ACCOUNT";
+		cout<<"\n\n\t08. EXIT";
 
