@@ -139,4 +139,7 @@ int main()          //main funtion
 			break;
 		 default :cout<<"\a";
 		}
+		cin.ignore();
+		cin.get();
+	}while(ch!='8');
 
