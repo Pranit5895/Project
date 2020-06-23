@@ -142,4 +142,6 @@ int main()          //main funtion
 		cin.ignore();
 		cin.get();
 	}while(ch!='8');
+	return 0;
+}
 
