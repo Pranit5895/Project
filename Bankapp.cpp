@@ -153,4 +153,29 @@ void write_account()      //function to write in a file
 	outFile.write(reinterpret_cast<char *> (&ac), sizeof(account));
 	outFile.close();
 }
+void display_sp(int n)     //function to read a specific record of file
+{
+	account ac;
+	bool flag=false;
+	ifstream inFile;
+	inFile.open("account.dat",ios::binary);
+	if(!inFile)
+	{
+		cout<<"File could not be open !! Press any Key...";
+		return;
+	}
+	cout<<"\nBALANCE DETAILS\n";
+
+    	while(inFile.read(reinterpret_cast<char *> (&ac), sizeof(account)))
+	{
+		if(ac.retacno()==n)
+		{
+			ac.show_account();
+			flag=true;
+		}
+	}
+	inFile.close();
+	if(flag==false)
+		cout<<"\n\nAccount number does not exist";
+}
 
