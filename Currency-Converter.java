@@ -89,5 +89,23 @@ public class CurrencyConverter {
  
 			ringgit = amount * 4.78;
 			System.out.println("Your " + amount + " euro is : " + f.format(ringgit) + " ringgit");
+		}else if (code == 5) {
+ 
+			// For Yen Conversion
+ 
+			rupee = amount * 0.63;
+			System.out.println("Your " + amount + " yen is : " + f.format(rupee) + " Ruppes");
+ 
+			dollar = amount * 0.008;
+			System.out.println("Your " + amount + " yen is : " + f.format(dollar) + " Dollar");
+ 
+			pound = amount * 0.007;
+			System.out.println("Your " + amount + " yen is : " + f.format(pound) + " Pound");
+ 
+			euro = amount * 0.007;
+			System.out.println("Your " + amount + " yen is : " + f.format(euro) + " Euro");
+ 
+			ringgit = amount * 0.037;
+			System.out.println("Your " + amount + " yen is : " + f.format(ringgit) + " ringgit");
 		}
 
