@@ -125,4 +125,7 @@ public class CurrencyConverter {
 			yen = amount * 26.63;
 			System.out.println("Your " + amount + " ringgit is : " + f.format(yen) + " yen");
 		}
+		else {
+			System.out.println("Invalid input");
+		}
 
