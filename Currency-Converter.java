@@ -128,4 +128,6 @@ public class CurrencyConverter {
 		else {
 			System.out.println("Invalid input");
 		}
+		System.out.println("Thank you for choosing our Example Programs");
+	}
 
