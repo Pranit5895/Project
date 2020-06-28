@@ -131,3 +131,5 @@ public class CurrencyConverter {
 		System.out.println("Thank you for choosing our Example Programs");
 	}
 
+}
+
