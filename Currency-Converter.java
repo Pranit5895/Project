@@ -107,5 +107,22 @@ public class CurrencyConverter {
  
 			ringgit = amount * 0.037;
 			System.out.println("Your " + amount + " yen is : " + f.format(ringgit) + " ringgit");
+		}else if (code == 6) {
+			// For Ringgit Conversion
+ 
+			rupee = amount * 16.8;
+			System.out.println("Your " + amount + " ringgit is : " + f.format(rupee) + " Ruppes");
+ 
+			dollar = amount * 0.239;
+			System.out.println("Your " + amount + " ringgit is : " + f.format(dollar) + " dollar");
+ 
+			pound = amount * 0.188;
+			System.out.println("Your " + amount + " ringgit is : " + f.format(pound) + " pound");
+ 
+			euro = amount * 0.209;
+			System.out.println("Your " + amount + " ringgit is : " + f.format(euro) + " euro");
+ 
+			yen = amount * 26.63;
+			System.out.println("Your " + amount + " ringgit is : " + f.format(yen) + " yen");
 		}
 
