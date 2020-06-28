@@ -133,3 +133,21 @@ public class CurrencyConverter {
 
 }
 
+/* SAMPLE OUTPUT 
+ * Java
+hi, Welcome to the Currency Converter!
+which currency You want to Convert ?
+1:Ruppe 	2:Dollar 	3:Pound
+4:Euro 	5:Yen 	6:Ringgit
+2
+How much Money you want to convert ?
+200
+Your 200.0 Dollar is : 14000 Ruppes
+Your 200.0 Dollar is : 156 Pound
+Your 200.0 Dollar is : 174 Euro
+Your 200.0 Dollar is : 22217.4 Yen
+Your 200.0 Dollar is : 834 ringgit
+Thank you for choosing our Example Programs
+*/
+
+
