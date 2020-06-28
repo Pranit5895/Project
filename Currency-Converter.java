@@ -7,3 +7,7 @@ public class CurrencyConverter {
 
 		double amount, dollar, pound, code, euro, yen, ringgit, rupee;
 
+		DecimalFormat f = new DecimalFormat("##.##");
+
+		Scanner sc = new Scanner(System.in);
+
