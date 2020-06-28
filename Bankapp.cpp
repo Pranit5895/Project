@@ -234,5 +234,24 @@ void delete_account(int n)         //function to delete record of file
 	rename("Temp.dat","account.dat");
 	cout<<"\n\n\tRecord Deleted ..";
 }
-
+void display_all()     //function to display list of account details 
+{
+	account ac;
+	ifstream inFile;
+	inFile.open("account.dat",ios::binary);
+	if(!inFile)
+	{
+		cout<<"File could not be open !! Press any Key...";
+		return;
+	}
+	cout<<"\n\n\t\tACCOUNT HOLDER LIST\n\n";
+	cout<<"====================================================\n";
+	cout<<"A/c no.      NAME           Type  Balance\n";
+	cout<<"====================================================\n";
+	while(inFile.read(reinterpret_cast<char *> (&ac), sizeof(account)))
+	{
+		ac.report();
+	}
+	inFile.close();
+}
 
