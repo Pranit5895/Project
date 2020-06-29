@@ -301,5 +301,13 @@ void deposit_withdraw(int n, int option) //function to deposit and withdraw
 	if(found==false)
 		cout<<"\n\n Record Not Found ";
 }
-
+void intro()     //introdunction function
+{
+	cout<<"\n\n\n\t  BANK";
+	cout<<"\n\n\tMANAGEMENT";
+	cout<<"\n\n\t  SYSTEM";
+	cout<<"\n\n\n\nMADE BY :Pranit Gupta";
+	cout<<"\n\nCOLLEGE-UPES,DEHRADUN";
+	cin.get();
+}
 
