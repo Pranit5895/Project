@@ -16,3 +16,6 @@ class Contact:
 
     def change_email(self,email):
         self.email=email
+
+    def change_phone(self,phone):
+        self.phone=phone
