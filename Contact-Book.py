@@ -158,3 +158,5 @@ def do_modification(contact):
         print "EOF Error occurred"
     except KeyboardInterrupt:
         print "KeyboardInterrupt occurred"
+
+print "Enter 'a' to add a contact, 'b' to browse through contacts, 'd' to delete a contact, 'm' to modify a contact, 's' to search for contact and 'q' to quit"
