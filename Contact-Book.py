@@ -113,4 +113,27 @@ def delete_contact():
                                                                                                                                                                                                                                                                         
                                                                                                                                                                                                                                                                 else:
                                                                                                                                                                                                                                                                         print "Address book empty. No contact to delete"
-                                                                                                                                                                                                                                                                            address_book_file.close()
+
+address_book_file.close()
+
+
+def modify_contact():
+    address_book_file=open("address_book_file","r")
+    is_file_empty=os.path.getsize("address_book_file")==0
+    if not is_file_empty:
+        name=input("Enter the name of the contact to be modified\n")
+        list_contacts=pickle.load(address_book_file)
+        is_contact_modified=False
+        for each_contact in list_contacts:
+            if each_contact.name==name:
+                do_modification(each_contact)
+                address_book_file=open("address_book_file","w")
+                pickle.dump(list_contacts,address_book_file)
+                is_contact_modified=True
+                print "Contact modified"
+                break
+        if not is_contact_modified:
+            print "No contact with this name found"
+    else:
+        print "Address book empty. No contact to delete"
+    address_book_file.close()
