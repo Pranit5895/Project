@@ -13,3 +13,6 @@ class Contact:
 
     def change_name(self,name):
         self.name=name
+
+    def change_email(self,email):
+        self.email=email
