@@ -10,3 +10,6 @@ class Contact:
 
      def __str__(self):
         return "Name:{0}\nEmail address:{1}\nPhone:{2}".format(self.name,self.email,self.phone)
+
+    def change_name(self,name):
+        self.name=name
