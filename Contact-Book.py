@@ -87,3 +87,30 @@ def search_contact():
     else:
         print "Address book empty. No contact to search"
     address_book_file.close()
+
+def delete_contact():
+            #name=input("Enter the name to be deleted\n")
+                address_book_file=open("address_book_file","r")
+                    is_file_empty=os.path.getsize("address_book_file")==0
+                        if not is_file_empty:
+                                name=input("Enter the name to be deleted\n")
+                                        list_contacts=pickle.load(address_book_file)
+                                                is_contact_deleted=False
+                                                        for i in range(0,len(list_contacts)):
+                                                                    each_contact=list_contacts[i]
+                                                                                if each_contact.name==name:
+                                                                                                del list_contacts[i]
+                                                                                                                is_contact_deleted=True
+                                                                                                                                print "Contact deleted"
+                                                                                                                                                address_book_file=open("address_book_file","w")
+                                                                                                                                                                if(len(list_contacts)==0):
+                                                                                                                                                                                    address_book_file.write("")
+                                                                                                                                                                                                    else:
+                                                                                                                                                                                                                        pickle.dump(list_contacts,address_book_file)
+                                                                                                                                                                                                                                        break
+                                                                                                                                                                                                                                                if not is_contact_deleted:
+                                                                                                                                                                                                                                                            print "No contact with this name found"
+                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                else:
+                                                                                                                                                                                                                                                                        print "Address book empty. No contact to delete"
+                                                                                                                                                                                                                                                                            address_book_file.close()
