@@ -39,3 +39,17 @@ def add_contact():
         print "Contact not added"
     finally:
         address_book_file.close()
+
+def get_contact_info_from_user():
+    try:
+        contact_name=input("Enter contact name\n")
+        contact_email=input("Enter contact email\n")
+        contact_phone=input("Enter contact phone number\n")
+        contact=Contact(contact_name,contact_email,contact_phone)
+        return contact
+    except EOFError as e:
+        #print "You entered end of file. Contact not added"
+        raise e
+    except KeyboardInterrupt as e:
+        #print "Keyboard interrupt. Contact not added"
+        raise e
