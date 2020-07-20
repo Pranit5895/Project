@@ -53,3 +53,15 @@ def get_contact_info_from_user():
     except KeyboardInterrupt as e:
         #print "Keyboard interrupt. Contact not added"
         raise e
+
+def display_contacts():
+    address_book_file=open("address_book_file","r")
+    is_file_empty=os.path.getsize("address_book_file")==0
+    if not is_file_empty:
+        list_contacts=pickle.load(address_book_file)
+        for each_contact in list_contacts:
+            print each_contact
+    else:
+        print "No contacts in address book"
+        return
+    address_book_file.close()
