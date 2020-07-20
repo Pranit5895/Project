@@ -160,3 +160,20 @@ def do_modification(contact):
         print "KeyboardInterrupt occurred"
 
 print "Enter 'a' to add a contact, 'b' to browse through contacts, 'd' to delete a contact, 'm' to modify a contact, 's' to search for contact and 'q' to quit"
+
+while True:
+    choice=input("Enter your choice\n")
+    if choice == 'q':
+        break
+    elif(choice=='a'):
+        add_contact()
+    elif(choice=='b'):
+        display_contacts()
+    elif(choice=='d'):
+        delete_contact()
+    elif(choice=='m'):
+        modify_contact()
+    elif(choice=='s'):
+        search_contact()
+    else:
+        print "Incorrect choice. Need to enter the choice again"
