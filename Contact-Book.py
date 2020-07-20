@@ -137,3 +137,24 @@ def modify_contact():
     else:
         print "Address book empty. No contact to delete"
     address_book_file.close()
+
+def do_modification(contact):
+    try:
+        while True:
+            print ("Enter 1 to modify email and 2 to modify address and 3 to quit without modifying")
+            choice=input()
+            if(choice=="1"):
+                new_email=input("Enter new email address\n")
+                contact.change_email(new_email)
+                break
+            elif(choice=="2"):
+                new_phone=input("Enter new phone number\n")
+                contact.change_phone(new_phone)
+                break
+            else:
+                print "Incorrect choice"
+                break
+    except EOFError:
+        print "EOF Error occurred"
+    except KeyboardInterrupt:
+        print "KeyboardInterrupt occurred"
