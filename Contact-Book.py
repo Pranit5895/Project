@@ -19,3 +19,23 @@ class Contact:
 
     def change_phone(self,phone):
         self.phone=phone
+
+def add_contact():
+    address_book_file=open("address_book_file","r")
+    is_file_empty=os.path.getsize("address_book_file")==0
+    if not is_file_empty:
+        list_contacts=pickle.load(address_book_file)
+    else:
+        list_contacts=[]
+    try:
+        contact=get_contact_info_from_user()
+        address_book_file=open("address_book_file","w")
+        list_contacts.append(contact)
+        pickle.dump(list_contacts,address_book_file)
+        print "Contact added"
+    except KeyboardInterrupt:
+        print "Contact not added"
+    except EOFError:
+        print "Contact not added"
+    finally:
+        address_book_file.close()
