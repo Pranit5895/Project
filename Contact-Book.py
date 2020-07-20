@@ -65,3 +65,25 @@ def display_contacts():
         print "No contacts in address book"
         return
     address_book_file.close()
+
+def search_contact():
+    #search_name=input("Enter the name\n")
+    address_book_file=open("address_book_file","r")
+    is_file_empty=os.path.getsize("address_book_file")==0
+    if not is_file_empty:
+        search_name=input("Enter the name\n")
+        is_contact_found=False
+        list_contacts=pickle.load(address_book_file)
+        for each_contact in list_contacts:
+            contact_name=each_contact.name
+            search_name=search_name.lower()
+            contact_name=contact_name.lower()
+            if(contact_name==search_name):
+                print each_contact
+                is_contact_found=True
+                break
+        if not is_contact_found:
+            print "No contact found with the provided search name"
+    else:
+        print "Address book empty. No contact to search"
+    address_book_file.close()
