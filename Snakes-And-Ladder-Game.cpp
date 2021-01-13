@@ -58,3 +58,5 @@ void main()
     else
         cout << player2name << " !! You are the winner of the game\n\n";
     draw_line(50, '+');
+    getch();
+}
