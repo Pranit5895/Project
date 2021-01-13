@@ -51,3 +51,10 @@ void main()
     cout << "\n\n\t\tRESULT\n\n";
     draw_line(50, '+');
     cout << endl;
+    gamescore(player1name, player2name, player1, player2);
+    cout << "\n\n\n";
+    if (player1 >= player2)
+        cout << player1name << " !! You are the winner of the game\n\n";
+    else
+        cout << player2name << " !! You are the winner of the game\n\n";
+    draw_line(50, '+');
