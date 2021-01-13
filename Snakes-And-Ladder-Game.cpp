@@ -18,3 +18,7 @@ void main()
     draw_line(50, '=');
     cout << "\n\n\n\n\t\tSNAKE LADDER GAME\n\n\n\n";
     draw_line(50, '=');
+    cout << "\n\n\nEnter Name of player 1 :";
+    gets(player1name);
+    cout << "\n\n\Enter Name of player 2 :";
+    gets(player2name);
