@@ -45,3 +45,9 @@ void main()
             cout << "\n\nGreat!! you got a ladder !! You are at position " << player2 << "\n";
         getch();
     }
+    clrscr();
+    cout << "\n\n\n";
+    draw_line(50, '+');
+    cout << "\n\n\t\tRESULT\n\n";
+    draw_line(50, '+');
+    cout << endl;
