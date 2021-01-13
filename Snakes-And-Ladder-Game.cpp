@@ -1,3 +1,5 @@
+//STARTING OF CODE
+
 #include<iostream.h>
 #include<conio.h>
 #include<stdlib.h>
@@ -167,3 +169,13 @@ void play_dice(int & score)
         score = 100;
     }
 }
+
+
+
+
+
+
+
+//TOOK REFERENCE FROM OTHER RESOURCES
+//END OF CODE
+
