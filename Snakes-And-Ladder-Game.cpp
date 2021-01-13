@@ -60,3 +60,8 @@ void main()
     draw_line(50, '+');
     getch();
 }
+void draw_line(int n, char ch)
+{
+    for (int i = 0; i < n; i++)
+        cout << ch;
+}
