@@ -22,3 +22,11 @@ void main()
     gets(player1name);
     cout << "\n\n\Enter Name of player 2 :";
     gets(player2name);
+    while (player1 <= 100 && player2 <= 100)
+	{
+        board();
+        gamescore(player1name, player2name, player1, player2);
+        cout << "\n\n--->" << player1name << " Now your Turn >> Press any key to play ";
+        getch();
+        lastposition = player1;
+        play_dice(player1);
