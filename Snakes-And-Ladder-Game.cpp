@@ -30,3 +30,12 @@ void main()
         getch();
         lastposition = player1;
         play_dice(player1);
+	if (player1 < lastposition)
+            cout << "\n\aOops!! Snake found !! You are at postion " << player1 << "\n";
+        else if (player1 > lastposition + 6)
+            cout << "\nGreat!! you got a ladder !! You are at position " << player1;#
+        include < iostream.h >
+            cout << "\n\n--->" << player2name << " Now your Turn >> Press any key to play ";
+        getch();
+        lastposition = player2;
+        play_dice(player2);
