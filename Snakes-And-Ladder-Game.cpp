@@ -39,3 +39,9 @@ void main()
         getch();
         lastposition = player2;
         play_dice(player2);
+	if (player2 < lastposition)
+            cout << "\n\n\aOops!! Snake found !! You are at position " << player2 << "\n";
+        else if (player2 > lastposition + 6)
+            cout << "\n\nGreat!! you got a ladder !! You are at position " << player2 << "\n";
+        getch();
+    }
