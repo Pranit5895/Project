@@ -34,3 +34,7 @@ int main() {
 
         int len = ccNumber.length();
         int doubleEvenSum = 0;
+
+         // Step 1 is to double every second digit, starting from the right. If it
+        // results in a two digit number, add both the digits to obtain a single
+        // digit number. Finally, sum all the answers to obtain 'doubleEvenSum'. 
