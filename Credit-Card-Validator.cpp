@@ -27,7 +27,10 @@ int main() {
         if (ccNumber == "exit")
             break;
 
-            else if (!isNumberString(ccNumber)) {
+        else if (!isNumberString(ccNumber)) {
             cout << "Bad input! ";
             continue;
         }
+
+        int len = ccNumber.length();
+        int doubleEvenSum = 0;
