@@ -46,3 +46,6 @@ int main() {
             }
             doubleEvenSum += dbl;
         }
+
+        // Step 2 is to add every odd placed digit from the right to the value
+        // 'doubleEvenSum'.
