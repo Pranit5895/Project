@@ -54,3 +54,5 @@ int main() {
             doubleEvenSum += (ccNumber[i] - 48);
         }
         
+        // Step 3 is to check if the final 'doubleEvenSum' is a multiple of 10.
+        // If yes, it is a valid CC number. Otherwise, not.
