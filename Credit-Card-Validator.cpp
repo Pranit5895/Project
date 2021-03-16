@@ -49,3 +49,8 @@ int main() {
 
         // Step 2 is to add every odd placed digit from the right to the value
         // 'doubleEvenSum'.
+        
+        for (int i = len - 1; i >= 0; i = i - 2) {
+            doubleEvenSum += (ccNumber[i] - 48);
+        }
+        
