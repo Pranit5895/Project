@@ -29,4 +29,7 @@ int main()
              << "Student Login\n3. Faculty Login\n4. "
                 "Proctor Login\n5. Admin View\n"
              << "6. Exit\nEnter option: ";
+        cin >> option;
+
+
         
