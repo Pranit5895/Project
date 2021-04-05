@@ -15,3 +15,9 @@ int main()
     // Name of the file in which DB is stored.
     ifstream f("Example.txt");
     string line;
+
+    // The following for loop counts the total number of
+    // lines in the file.
+    for (int i = 0; std::getline(f, line); ++i) {
+        count_n++;
+    }
