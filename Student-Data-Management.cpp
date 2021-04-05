@@ -121,6 +121,41 @@ int main()
                     "about marks\n"
                  << "2. View data\nEnter option: ";
             cin >> option;
+            if (option == 1) {
+                cout
+                    << "Warning! You would need to add mark"
+                    << "details for all the students!"
+                    << endl;
+                for (int i = 0; i < count_n; i++) {
+                    fstream file("Example.txt");
+ 
+                    // The seek in file has been done
+                    // according to the length
+                    // of the data being inserted. It needs
+                    // to adjusted accordingly for diffferent
+                    // lengths of data.
+ 
+                    if (strcmp(subcode, code1.c_str())
+                        == 0) {
+                        file.seekp(26 + 37 * i,
+                                   std::ios_base::beg);
+                        cout << "Enter the mark of student#"
+                             << (i + 1) << " : ";
+                        cin >> mark;
+                        file.write(mark.c_str(), 2);
+                    }
+ 
+                    if (strcmp(subcode, code2.c_str())
+                        == 0) {
+                        file.seekp(29 + 37 * i,
+                                   std::ios_base::beg);
+                        cout << "Enter the mark of student#"
+                             << (i + 1) << " : ";
+                        cin >> mark;
+                        file.write(mark.c_str(), 2);
+                    }
+                }
+            }
 
 
         
