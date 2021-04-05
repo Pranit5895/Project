@@ -237,6 +237,39 @@ int main()
                 cout << "No such proctor ID found!" << endl;
             }
         }
+        // This loop acts as an admin view to see all the
+        // data in the file.
+ 
+        else if (option == 5) {
+            char password[25];
+            cout << "Enter the admin password: ";
+            cin >> password;
+ 
+            // This variable value can be changed according
+            // to your requirement of the administrator
+            // password.
+ 
+            string admin_pass = "admin";
+ 
+            if (strcmp(password, admin_pass.c_str()) == 0) {
+                cout << "Reg No.       "
+                        "\tName\tCSE1001\tCSE1002\tProctor "
+                        "ID"
+                     << endl;
+                ifstream infile;
+                infile.open("Example.txt", ios::in);
+                char data[20];
+ 
+                while (infile >> data) {
+                    cout << data << "\t";
+                    infile >> data;
+                    cout << data << "\t";
+                    infile >> data;
+                    cout << data << "\t";
+                    infile >> data;
+                    cout << data << "\t";
+                    infile >> data;
+                    cout << data << endl;
  
 
 
