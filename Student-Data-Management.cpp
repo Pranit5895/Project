@@ -156,6 +156,53 @@ int main()
                     }
                 }
             }
+            // This loop is used to view marks of a student.
+            // The extra infile commands have been used to
+            // get a specific mark only since the data has
+            // been seperated by a tabspace.
+ 
+            else if (option == 2) {
+                infile.open("Example.txt", ios::in);
+                if (strcmp(subcode, code1.c_str()) == 0) {
+                    cout << "Registration number - Marks\n"
+                         << endl;
+                    while (infile >> data) {
+                        cout << data;
+                        infile >> data;
+                        infile >> data;
+                        cout << " - " << data << endl;
+                        infile >> data;
+                        infile >> data;
+                        check = 1;
+                    }
+                }
+ 
+                infile.close();
+                infile.open("Example.txt", ios::in);
+ 
+                if (strcmp(subcode, code2.c_str()) == 0) {
+                    cout << "Registration number - Marks\n"
+                         << endl;
+                    while (infile >> data) {
+                        cout << data;
+                        infile >> data;
+                        infile >> data;
+                        infile >> data;
+                        cout << " - " << data << endl;
+                        infile >> data;
+                        check = 1;
+                    }
+                }
+            }
+ 
+            infile.close();
+ 
+            if (check == 0) {
+                cout << "No such subject code found!"
+                     << endl;
+            }
+        }
+ 
 
 
         
