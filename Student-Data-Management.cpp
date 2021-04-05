@@ -6,7 +6,7 @@
 using namespace std;
  
 int main()
-{.
+{
     char data[15];
     int n = 0, option = 0, count_n = 0;
     // This is the initial mark alloted to a subject.
@@ -31,7 +31,7 @@ int main()
              << "6. Exit\nEnter option: ";
         cin >> option;
 
-        if (option == 1) {
+        if (option == 1) {     //ADDING NEW STUDENT 
             cout << "Enter the number of students: ";
             cin >> n;
  
