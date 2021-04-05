@@ -106,6 +106,16 @@ int main()
                      << endl;
             }
         }
+        // This loop is used to view and add marks to the
+        // database of a student.
+        else if (option == 3) {
+            char subcode[7];
+            cout << "Enter your subject code: ";
+            cin >> subcode;
+            string code1 = "CSE1001", code2 = "CSE1002",
+                   mark = "";
+            ifstream infile;
+            int check = 0;
 
 
         
