@@ -202,6 +202,41 @@ int main()
                      << endl;
             }
         }
+        // This loop displays all the details of students
+        // under the same proctor ID.
+ 
+        else if (option == 4) {
+            char procid[7];
+            cout << "Enter your proctor ID: ";
+            cin >> procid;
+            int check = 0;
+            char temp1[100], temp2[100], temp3[100];
+            char temp4[100], id[100];
+            ifstream infile;
+            infile.open("Example.txt", ios::in);
+ 
+            while (infile >> temp1) {
+                infile >> temp2;
+                infile >> temp3;
+                infile >> temp4;
+                infile >> id;
+ 
+                if (strcmp(id, procid) == 0) {
+                    cout << "\nRegistration Number: "
+                         << temp1 << endl;
+                    cout << "Name: " << temp2 << endl;
+                    cout << "CSE1001 Mark: " << temp3
+                         << endl;
+                    cout << "CSE1002 Mark: " << temp4
+                         << endl;
+                    check = 1;
+                }
+            }
+ 
+            if (check == 0) {
+                cout << "No such proctor ID found!" << endl;
+            }
+        }
  
 
 
