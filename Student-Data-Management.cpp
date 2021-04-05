@@ -67,5 +67,45 @@ int main()
             }
         }
 
+        else if (option == 2) {
+            char regno[9];
+            cout << "Enter your registration number: ";
+            cin >> regno;
+            ifstream infile;
+            int check = 0;
+            infile.open("Example.txt", ios::in);
+ 
+            // This loop prints out the data according to
+            // the registration number specified.
+            while (infile >> data) {
+                if (strcmp(data, regno) == 0) {
+                    cout
+                        << "\nRegistration Number: " << data
+                        << endl;
+                    infile >> data;
+                    cout << "Name: " << data << endl;
+ 
+                    infile >> data;
+                    cout << "CSE1001 mark: " << data
+                         << endl;
+ 
+                    infile >> data;
+                    cout << "CSE1002 mark: " << data
+                         << endl;
+ 
+                    infile >> data;
+                    cout << "Proctor ID: " << data << endl;
+ 
+                    infile.close();
+                    check = 1;
+                }
+            }
+ 
+            if (check == 0) {
+                cout << "No such registration number found!"
+                     << endl;
+            }
+        }
+
 
         
