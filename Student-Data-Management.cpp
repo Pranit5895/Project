@@ -270,6 +270,11 @@ int main()
                     cout << data << "\t";
                     infile >> data;
                     cout << data << endl;
+                    }
+            }
+        }
+    }
+}
  
 
 
