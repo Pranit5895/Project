@@ -117,5 +117,10 @@ int main()
             ifstream infile;
             int check = 0;
 
+            cout << "\nAvailable operations: \n1. Add data "
+                    "about marks\n"
+                 << "2. View data\nEnter option: ";
+            cin >> option;
+
 
         
