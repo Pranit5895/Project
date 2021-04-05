@@ -205,7 +205,7 @@ int main()
         // This loop displays all the details of students
         // under the same proctor ID.
  
-        else if (option == 4) {
+        else if (option == 4) {   //PROCTOR LOGIN
             char procid[7];
             cout << "Enter your proctor ID: ";
             cin >> procid;
