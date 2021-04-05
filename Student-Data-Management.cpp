@@ -240,7 +240,7 @@ int main()
         // This loop acts as an admin view to see all the
         // data in the file.
  
-        else if (option == 5) {
+        else if (option == 5) {   //ADMIN VIEW
             char password[25];
             cout << "Enter the admin password: ";
             cin >> password;
