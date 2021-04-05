@@ -67,7 +67,7 @@ int main()
             }
         }
 
-        else if (option == 2) {
+        else if (option == 2) {    //STUDENT LOGIN
             char regno[9];
             cout << "Enter your registration number: ";
             cin >> regno;
