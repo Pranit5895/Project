@@ -161,7 +161,7 @@ int main()
             // get a specific mark only since the data has
             // been seperated by a tabspace.
  
-            else if (option == 2) {
+            else if (option == 2) {   //VIEW DATA 
                 infile.open("Example.txt", ios::in);
                 if (strcmp(subcode, code1.c_str()) == 0) {
                     cout << "Registration number - Marks\n"
