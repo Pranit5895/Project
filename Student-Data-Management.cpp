@@ -121,7 +121,7 @@ int main()
                     "about marks\n"
                  << "2. View data\nEnter option: ";
             cin >> option;
-            if (option == 1) {
+            if (option == 1) {   //ADD DATA ABOUT MARKS 
                 cout
                     << "Warning! You would need to add mark"
                     << "details for all the students!"
