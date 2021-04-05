@@ -108,7 +108,7 @@ int main()
         }
         // This loop is used to view and add marks to the
         // database of a student.
-        else if (option == 3) {
+        else if (option == 3) {     //FACULTY LOGIN
             char subcode[7];
             cout << "Enter your subject code: ";
             cin >> subcode;
