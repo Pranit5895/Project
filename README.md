@@ -1,6 +1,6 @@
 # Project
 
-# Here's a List of all the Projects i have made and uploaded in this repository. 
+<h2>Here's a List of all the Projects i have made and uploaded in this repository. </h2>
 LIBRARY MANAGEMENT SYSTEM (LMS) CODE 
 
 TIC TAC TOE GAME (TURBO C++)
